@@ -29,6 +29,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
 //utilisations d express:
+// start express app:
 const app = express();
 
 // on commence a remplir le site web :
