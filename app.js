@@ -19,6 +19,9 @@ const hpp = require('hpp');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const cookieParser = require('cookie-parser');
 
+// eslint-disable-next-line import/no-extraneous-dependencies
+const compression = require('compression');
+
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 
@@ -111,6 +114,8 @@ app.use(
 //   console.log('Hello from the middleware');
 //   next(); // oblige sinn ca bloque car ca ne passe pas au suivant ds le middleware c comme ca
 // });
+
+app.use(compression());
 
 //creer notre propre middleware mais ce coup ci en manipulant et utilisant les donnees:
 //test middleware:
