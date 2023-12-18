@@ -4,8 +4,8 @@ const dotenv = require('dotenv');
 
 //fixer les erreurs pas attraper par exemple x qui n est pas defini:
 process.on('uncaughtException', (err) => {
-  //console.log('UNCAUGHT EXCEPTION! Shutting down...');
-  //console.log(err.name, err.message);
+  console.log('UNCAUGHT EXCEPTION! Shutting down...');
+  console.log(err.name, err.message);
   process.exit(1);
 });
 
@@ -55,13 +55,13 @@ mongoose
 
 const port = process.env.PORT || 3000;
 const server = app.listen(port, () => {
-  //console.log(`App run on port ${port}...`);
+  console.log(`App run on port ${port}...`);
 });
 
 //globalement l erreur qd le mdp est pas bon par exemple:
 process.on('unhandledRejection', (err) => {
-  //console.log('UNHANDLER REJECTION! Shutting down...');
-  //console.log(err.name, err.message);
+  console.log('UNHANDLER REJECTION! Shutting down...');
+  console.log(err.name, err.message);
   server.close(() => {
     process.exit(1);
   });

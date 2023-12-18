@@ -1,3 +1,4 @@
+/* eslint-disable node/no-missing-require */
 //DBosfyYWFO2IpZFg:code db
 //site a voir pr la doc : expressjs.com
 const path = require('path');
@@ -19,7 +20,7 @@ const hpp = require('hpp');
 // eslint-disable-next-line import/no-extraneous-dependencies
 const cookieParser = require('cookie-parser');
 
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-unresolved
 const compression = require('compression');
 
 const AppError = require('./utils/appError');
