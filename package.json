@@ -3,12 +3,15 @@
   "version": "1.0.0",
   "description": "Learning nod , express and mongoDB",
   "main": "app.js",
+  "targets": {
+    "main": false
+  },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production&&nodemon server.js",
     "debug": "ndb server.js",
-    "watch:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js",
-    "build:js": "parcel watch ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
+    "build:js": "parcel build ./public/js/index.js --out-dir ./public/js --out-file bundle.js"
   },
   "author": "David Bourak",
   "license": "ISC",
@@ -49,6 +52,7 @@
     "parcel-bundler": "^1.12.5",
     "prettier": "^3.0.3"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
   "engines": {
     "node": ">=10.0.0"
   }
